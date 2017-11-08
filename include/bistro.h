@@ -69,22 +69,21 @@ void    infin_exprnb_basedown(t_exprnb *nb);
 void	infin_exprnb_updatelen(t_exprnb *nb);
 int     infin_exprnb_is_zero2(t_exprnb *nb);
 
-char    *infin(char *n1, char *n2, char op, t_calc *def);
+char *infin(char *n1, char *n2, char op, t_calc *def);
 t_exprnb	*infin_add(t_exprnb *nb1, t_exprnb *nb2, t_calc *def);
 t_exprnb	*infin_sub(t_exprnb *nb1, t_exprnb *nb2, t_calc *def);
 t_exprnb *infin_mul(t_exprnb *nb1, t_exprnb *nb2, t_calc *def);
 t_exprnb *infin_div(t_exprnb *nb1, t_exprnb *nb2, t_calc *def);
 t_exprnb *infin_mod(t_exprnb *nb1, t_exprnb *nb2, t_calc *def);
 
-int     from_base(char c, t_calc *def);
-char	to_base(int i, t_calc *def);
-char	*to_base_expr(int i, t_calc *def);
-int	infin_exprnb_free(t_exprnb *nb);
+int from_base(char c, t_calc *def);
+char to_base(int i, t_calc *def);
+char *to_base_expr(int i, t_calc *def);
+int infin_exprnb_free(t_exprnb *nb);
 
 
-# define SYNTAX_ERROR_MSG		"syntax error"
-# define SYNTAX_ERROR_READSIZE		"size_read must be a exprictly positive\
- integer"
+#define SYNTAX_ERROR_MSG		"syntax error"
+#define SYNTAX_ERROR_READSIZE		"size_read must be a exprictly positive integer"
 # define SYNTAX_ERROR_READSIZE_LONG	"Invalid size_read (too long) or new\
  line in expression"
 # define SYNTAX_ERROR_BASELEN		"The base must contain at least 2\
@@ -113,14 +112,14 @@ int	infin_exprnb_free(t_exprnb *nb);
 # define SYNTAX_ERROR_OP5		"Bad operator at start or end"
 
 # define ERROR_MSG		"error"
-# define RUNTIME_ERROR_MEMORY		"Out of memory"
-# define RUNTIME_ERROR_DIVZERO		"Division by zero"
-# define RUNTIME_ERROR_MODZERO		"Modulo by zero"
+#define RUNTIME_ERROR_MEMORY		"Out of memory"
+#define RUNTIME_ERROR_DIVZERO		"Division by zero"
+#define RUNTIME_ERROR_MODZERO		"Modulo by zero"
 
 void	*my_error(char *type, char *msg);
 int	my_error2(char *type, char *msg);
 
-unsigned int    my_atoi(char *expr);
+unsigned int my_atoi(char *expr);
 
 
 #endif /* !BISTRO_H_ */
