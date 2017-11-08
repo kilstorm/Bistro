@@ -41,8 +41,7 @@ t_exprnb *infin_add(t_exprnb *nb1, t_exprnb *nb2, t_calc *def)
 	if (result == NULL)
 		return (NULL);
 	def->var->k = 0;
-	while (def->var->k < nb1->strlen || def->var->k < nb2->strlen)
-	{
+	while (def->var->k < nb1->strlen || def->var->k < nb2->strlen) {
 		infin_add_char(nb1, nb2, result, def);
 		def->var->k = def->var->k + 1;
 	}

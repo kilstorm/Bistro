@@ -24,16 +24,14 @@ int check_expr_syntax(t_calc *def)
 	return (0);
 }
 
-void	*my_error(char *type, char *msg)
+void *my_error(char *type, char *msg)
 {
-	int i = my_strlen(msg);
-
-	i++;
 	my_puterror(type);
+	my_puterror(msg);
 	return (NULL);
 }
 
-int	my_error2(char *type, char *msg)
+int my_error2(char *type, char *msg)
 {
 	my_error(type, msg);
 	return (1);
